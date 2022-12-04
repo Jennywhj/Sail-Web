@@ -1,0 +1,276 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<!-- <style type="text/css">
+  .list-group-flush > .list-group-item:last-child {
+    border-bottom-width: 1px !important;
+  }
+  .hiden-link {
+    z-index: 4;
+    --bs-text-opacity: 0;
+  }
+  .hiden-link:hover {
+    --bs-text-opacity: 1 !important;
+  }
+  .list-group-item:last-child {
+    padding-bottom: 0 !important;
+  }
+  .list-group-item > a {
+    display: inline-block;
+  }
+  .list-group-item > a > img {
+    vertical-align: middle;
+  }
+</style> -->
+{% endblock %} {% block main %}
+
+<div class="my-5 text-center text-light">
+  <h1 class="display-1 fw-normal">DeepStream-MRI</h1>
+  <div class="container col-lg-8">
+    <p class="lead fw-normal">A complete automated analytics toolkit and workflow for AI-based brain MRI data processing, quantification, analysis and understanding.</p>
+  </div>
+  <a target="_blank" class="btn btn-outline-secondary" href="https://github.com/Yanting-Yang/DeepStream-MRI">Coming soon (view the github)</a>
+</div>
+
+<div class="position-relative">
+  <a target="_blank" class="position-absolute" id="info" style="top: -56px"></a>
+</div>
+<div class="py-3 mx-md-3 bg-light border-radius-2" id="myGroup">
+  <h1 class="display-4 fw-normal border-bottom-dash text-center">Info/Github</h1>
+
+  <div class="py-3 px-md-3">
+    <ol class="list-group list-group-numbered list-group-flush">
+      <li class="list-group-item">
+        Automated processing streamline for mouse brain MRI
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            Structure MRI
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">K-space convertor (Sabrina Gjerswold-Selleck, Zihan Wan)</li>
+              <li class="list-group-item">Motion detection and correction (Zihan Wan)</li>
+              <li class="list-group-item">Within-subject Rigid Registration (Anish Puligilla)</li>
+              <li class="list-group-item">* SRR (Zihan, WanZhuoyao Xin)</li>
+              <li class="list-group-item">
+                SABER (DL-BET) (Sabrina Gjerswold-Selleck, Yanting Yang)
+                <a target="_blank" href="https://github.com/SAIL-GuoLab/DL-BET"><img alt="github" src="https://img.shields.io/badge/github-DL--BET-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+            </ol>
+          </li>
+          <li class="list-group-item">
+            CBV fMRI (Automated processing workflow for mouse brain CBV fMRI)
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">K-space convertor (Sabrina Gjerswold-Selleck, Zihan Wan)</li>
+              <li class="list-group-item">Motion detection and correction (Zihan Wan)</li>
+              <li class="list-group-item">Within-subject Rigid Registration (Anish Puligilla)</li>
+              <li class="list-group-item">* SRR (Zihan Wan, Zhuoyao Xin)</li>
+              <li class="list-group-item">
+                SABER (DL-BET) (Sabrina Gjerswold-Selleck, Yanting Yang)
+                <a target="_blank" href="https://github.com/SAIL-GuoLab/DL-BET"><img alt="github" src="https://img.shields.io/badge/github-DL--BET-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">DRC/ssCE (Yanting Yang)</li>
+              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+            </ol>
+          </li>
+          <li class="list-group-item">AI-Ktrans mapping from low-dose DCE MRI (Joanne Lee)</li>
+          <li class="list-group-item">AI-Ktrans mapping from IVIM-DTI MRI (Joanne Lee, Xuemin Zhu)</li>
+        </ol>
+      </li>
+      <li class="list-group-item">
+        Automated processing streamline for human brain MRI
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            Structure MRI
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">* QC</li>
+              <li class="list-group-item">* SRR (Zihan Wan, Zhuoyao Xin)</li>
+              <li class="list-group-item">
+                TABS - Bias field correction, BET and PVE (Vish Mitnala Rao)
+                <a target="_blank" href="https://github.com/raovish6/TABS"><img alt="github" src="https://img.shields.io/badge/github-TABS-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+            </ol>
+          </li>
+          <li class="list-group-item">
+            AI-CBV mapping from T1-weighted MRI
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">* QC</li>
+              <li class="list-group-item">* SRR (Zihan Wan, Zhuoyao Xin)</li>
+              <li class="list-group-item">
+                TABS - Bias field correction, BET and PVE (Vish Mitnala Rao)
+                <a target="_blank" href="https://github.com/raovish6/TABS"><img alt="github" src="https://img.shields.io/badge/github-TABS-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+              <li class="list-group-item">Deriving AI-CBV (Joanne Lee, Xuemin Zhu)</li>
+            </ol>
+          </li>
+          <li class="list-group-item">AI-Ktrans mapping from DTI MRI (Joanne Lee, Xuemin Zhu)</li>
+        </ol>
+      </li>
+      <li class="list-group-item">
+        Automated processing streamline for mouse brain MEGAPRESS MRS
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            JET v1.0 (David Ma)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/JET"><img alt="github" src="https://img.shields.io/badge/github-JET-brightgreen?logo=github" /></a>
+          </li>
+          <li class="list-group-item">
+            JET v2.0
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">
+                MRS registration (David Ma)
+                <a target="_blank" href="https://github.com/davidjma/CNN-FPC"><img alt="github" src="https://img.shields.io/badge/github-CNN--FPC-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">MRS fitting (Ye Tian, David Ma)</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="list-group-item">
+        Automated processing streamline for human brain MEGAPRESS MRS
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            JET v1.0 (David Ma)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/JET"><img alt="github" src="https://img.shields.io/badge/github-JET-brightgreen?logo=github" /></a>
+          </li>
+          <li class="list-group-item">
+            JET v2.0
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">
+                MRS registration (David Ma)
+                <a target="_blank" href="https://github.com/davidjma/CNN-FPC"><img alt="github" src="https://img.shields.io/badge/github-CNN--FPC-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">MRS fitting (Ye Tian, David Ma)</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="list-group-item">
+        Others
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            Deep Learning of Gadolinium Contrast for Mapping Cerebral Blood Volume from Single-Modal Non-Contrast MRI (Chen Liu, Nanyan Zhu)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/DeepContrast_Demo"><img alt="github" src="https://img.shields.io/badge/github-DeepContrast__Demo-brightgreen?logo=github" /></a>
+          </li>
+          <li class="list-group-item">
+            Statistical Analyses and Visualization for Neuroimaging Large Dataset (Chen Liu, Nanyan Zhu)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/StatsVisualNeuroImaging"><img alt="github" src="https://img.shields.io/badge/github-StatsVisualNeuroImaging-brightgreen?logo=github" /></a>
+          </li>
+          <li class="list-group-item">
+            Dynamic Contrast Enhancement Perfusion Modeling in Mice (Nanyan Zhu)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/DRC_modeling"><img alt="github" src="https://img.shields.io/badge/github-DRC__modeling-brightgreen?logo=github" class="align-middle" /></a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+
+  <!--Automated processing streamline-->
+  <!-- <div class="mx-md-3 my-4 row">
+    <h1 class="display-6 fw-normal text-center">Automated processing streamline</h1>
+    <div class="col-12 col-md-6 py-3">
+      <h3 class="border-bottom-dash ps-3 ps-md-0">Mouse brain MRI</h3>
+      <div class="list-group list-group-flush">
+        <div class="position-relative">
+          <a target="_blank" class="text-dark position-absolute px-3 py-2 hiden-link">Structure MRI</a>
+        </div>
+        <a target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sMRI" role="button" aria-expanded="false" aria-controls="sMRI">
+          Structure MRI
+          <span class="badge bg-primary rounded-pill">6</span>
+        </a>
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="sMRI" data-bs-parent="#myGroup">
+          <a target="_blank" class="list-group-item list-group-item-action">K-space convertor</a>
+          <a target="_blank" class="list-group-item list-group-item-action">Motion detection and correction</a>
+          <a target="_blank" class="list-group-item list-group-item-action">Within-subject Rigid Registration</a>
+          <a target="_blank" class="list-group-item list-group-item-action">SRR</a>
+          <a target="_blank" class="list-group-item list-group-item-action">SABER (DL-BET)</a>
+          <a target="_blank" class="list-group-item list-group-item-action">Between-subject Diffeomorphic Registration</a>
+        </div>
+        <div class="position-relative">
+          <a target="_blank" class="text-dark position-absolute px-3 py-2 hiden-link">CBV fMRI</a>
+        </div>
+        <a target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#fMRI" role="button" aria-expanded="false" aria-controls="fMRI">
+          CBV fMRI
+          <span class="badge bg-primary rounded-pill">7</span>
+        </a>
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="fMRI" data-bs-parent="#myGroup">
+          <a target="_blank" class="list-group-item list-group-item-action">K-space convertor</a>
+          <a target="_blank" class="list-group-item list-group-item-action">Motion detection and correction</a>
+          <a target="_blank" class="list-group-item list-group-item-action">Within-subject Rigid Registration</a>
+          <a target="_blank" class="list-group-item list-group-item-action">SRR</a>
+          <a target="_blank" class="list-group-item list-group-item-action">SABER (DL-BET)</a>
+          <a target="_blank" class="list-group-item list-group-item-action">DRC/ssCE</a>
+          <a target="_blank" class="list-group-item list-group-item-action">Between-subject Diffeomorphic Registration</a>
+        </div>
+        <a target="_blank" class="list-group-item list-group-item-action">AI-Ktrans mapping from low-dose DCE MRI</a>
+        <a target="_blank" class="list-group-item list-group-item-action">AI-Ktrans mapping from IVIM-DTI MRI</a>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 py-3">
+      <h3 class="border-bottom-dash ps-3 ps-md-0">Human brain MRI</h3>
+      <div class="list-group list-group-flush">
+        <div class="position-relative">
+          <a target="_blank" class="text-dark position-absolute px-3 py-2 hiden-link">Structure MRI</a>
+        </div>
+        <a target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sMRIhuman" role="button" aria-expanded="false" aria-controls="sMRIhuman">
+          Structure MRI
+          <span class="badge bg-primary rounded-pill">4</span>
+        </a>
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="sMRIhuman" data-bs-parent="#myGroup">
+          <a target="_blank" class="list-group-item list-group-item-action">QC</a>
+          <a target="_blank" class="list-group-item list-group-item-action">SRR</a>
+          <a target="_blank" class="list-group-item list-group-item-action">TABS - Bias field correction, BET and PVE</a>
+          <a target="_blank" class="list-group-item list-group-item-action">Between-subject Diffeomorphic Registration</a>
+        </div>
+        <div class="position-relative">
+          <a target="_blank" class="text-dark position-absolute px-3 py-2 hiden-link">AI-CBV mapping from T1-weighted MRI</a>
+        </div>
+        <a target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#CBVhuman" role="button" aria-expanded="false" aria-controls="CBVhuman">
+          AI-CBV mapping from T1-weighted MRI
+          <span class="badge bg-primary rounded-pill">5</span>
+        </a>
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="CBVhuman" data-bs-parent="#myGroup">
+          <a target="_blank" class="list-group-item list-group-item-action">QC</a>
+          <a target="_blank" class="list-group-item list-group-item-action">SRR</a>
+          <a target="_blank" class="list-group-item list-group-item-action">TABS - Bias field correction, BET and PVE</a>
+          <a target="_blank" class="list-group-item list-group-item-action">Between-subject Diffeomorphic Registration</a>
+          <a target="_blank" class="list-group-item list-group-item-action">Deriving AI-CBV</a>
+        </div>
+        <a target="_blank" class="list-group-item list-group-item-action">AI-Ktrans mapping from DTI MRI</a>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 py-3">
+      <h3 class="border-bottom-dash ps-3 ps-md-0">Mouse brain MEGAPRESS MRS</h3>
+      <div class="list-group list-group-flush">
+        <a target="_blank" class="list-group-item list-group-item-action">JET v1.0</a>
+        <div class="position-relative">
+          <a target="_blank" class="text-dark position-absolute px-3 py-2 hiden-link">JET v2.0</a>
+        </div>
+        <a target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#JETv2mouse" role="button" aria-expanded="false" aria-controls="JETv2mouse">
+          JET v2.0
+          <span class="badge bg-primary rounded-pill">2</span>
+        </a>
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="JETv2mouse" data-bs-parent="#myGroup">
+          <a target="_blank" class="list-group-item list-group-item-action">MRS registration</a>
+          <a target="_blank" class="list-group-item list-group-item-action">MRS fitting</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 py-3">
+      <h3 class="border-bottom-dash ps-3 ps-md-0">Human brain MEGAPRESS MRS</h3>
+      <div class="list-group list-group-flush">
+        <a target="_blank" class="list-group-item list-group-item-action">JET v1.0</a>
+        <div class="position-relative">
+          <a target="_blank" class="text-dark position-absolute px-3 py-2 hiden-link">JET v2.0</a>
+        </div>
+        <a target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#JETv2human" role="button" aria-expanded="false" aria-controls="JETv2human">
+          JET v2.0
+          <span class="badge bg-primary rounded-pill">2</span>
+        </a>
+        <div class="list-group list-group-flush ps-3 pb-3 collapse" id="JETv2human" data-bs-parent="#myGroup">
+          <a target="_blank" class="list-group-item list-group-item-action">MRS registration</a>
+          <a target="_blank" class="list-group-item list-group-item-action">MRS fitting</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+{% endblock %}

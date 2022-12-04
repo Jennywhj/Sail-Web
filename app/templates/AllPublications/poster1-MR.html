@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<style type="text/css">
+  /* .article-container .pt-3{
+    max-width: 760px;
+    padding: 20px;
+    margin: auto;
+    padding-top: 1rem!important;
+  } */
+  
+  .article-metadata {
+    margin-bottom: 15px;
+    overflow: hidden;
+    font-size: 14px;
+    letter-spacing: .03em;
+    color: rgba(0, 0, 0, .54);
+  }
+
+  .abstract-font{
+    font-size: 1.25rem;
+  }
+
+  .fig-explan{
+    color:rgb(98, 94, 94);
+  }
+
+</style>
+
+{% endblock %}{% block main %}
+<div class="py-3 mx-md-3 bg-light border-radius-2">
+  <!-- <div class="article-container pt-3"> -->
+
+  <div class="container text-center">
+    <h1>MR spectroscopy frequency and phase correction using convolutional neural networks</h1>
+    <div class="article-metadata">
+      <div>
+        <span>David J. Ma, Hortense A-M. Le, Yuming Ye, Andrew F. Laine, Jeffery A. Lieberman, Douglas L. Rothman, Scott A. Small, Jia Guo</span>
+      </div>
+      <span>May, 2022</span>
+    </div>
+    <a target="_blank" class="btn btn-outline-primary btn-page-header" href="https://doi.org/10.1002/mrm.29103">Paper</a>
+    &nbsp;&nbsp;
+    <a target="_blank" class="btn btn-outline-primary btn-page-header">Code</a>
+    &nbsp;&nbsp;
+    <a class="btn btn-outline-primary btn-page-header">Cite</a>
+  </div>
+  <div class="container featured-image-wrapper mt-4 mb-4" >
+      <div style="position:relative">
+        <img src="{{ url_for('static', filename='PicturesInPaper/MRimage1.png') }}" height="600" alt="" class="featured-image text-center">
+        <img src="{{ url_for('static', filename='PicturesInPaper/MRimage2.png') }}" height="600" alt="" class="featured-image text-center">
+      </div>
+      <div>
+        <p class="fig-explan">
+          Figure 1. 
+          Network structure, the pipeline for assessment and sample outputs of DeepSPEC model. (A) The network architecture of the CNN model. Each network was trained through 300 epochs with early stopping implemented when 40 consecutive epochs did not improve the lowest validation loss. (B) Flow chart of computation to determine the Diff spectra. (C) Comparison between On, Off, and Diff spectra with offsets, with DeepSPEC, and without offsets.</p>
+      </div>
+      <div>
+        <p class="fig-explan">
+          Figure 2. 
+          Difference spectra and performance scores comparing the MLP-based approach to SR, DeepSPEC to SR and DeepSPEC to the MLP-based approach for the 33 in vivo datasets. The difference spectra were generated without any FPC (Original), using the network shown in Figure 1 (MLP-based approach and CNN) and SR (spectral registration). (A) Results of applying corrections to the in vivo data without further manipulation, and with additional frequency and phase offsets applied to the same 33 datasets: small, medium and large. (B) Comparative performance scores P and Q for the MLP-based approach and SR for each dataset. (C) Comparative performance scores P and Q for CNN and SR for each dataset. (D) Comparative performance scores P and Q for CNN and the MLP-based approach for each dataset.
+      </div>
+  </div>
+  <div class="container-xl">
+    <h3 class="abstract">Abstract</h3>
+    <p class="abstract abstract-font">We introduce DeepSPEC, a novel convolutional neural network (CNN) -based approach for frequency-and-phase correction (FPC) of MRS spectra. In DeepSPEC, two neural networks (one for frequency correction and one for phase correction) were trained and validated using published simulated and in vivo MEGA-PRESS MRS dataset with wide-range artificial frequency and phase offsets applied. DeepSPEC was subsequently tested and compared to the current deep learning solution, a multilayer perceptron (MLP)-based approach. Furthermore, random noise was added to the original simulated dataset to further investigate the model performance at varied signal-to-noise ratio (SNR) levels. The testing showed that DeepSPEC is more robust to noise compared to the MLP-based approach due to having a smaller mean absolute error in both frequency and phase offset prediction. Furthermore, additional frequency and phase offsets were applied to the in vivo dataset, and DeepSPEC demonstrated better performance for FPC when compared to the MLP-based approach. 
+      <br style="line-height: 10;"></br>
+  </div>
+</div>
+{% endblock %}

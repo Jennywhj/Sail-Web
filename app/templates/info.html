@@ -1,0 +1,143 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<style type="text/css">
+  .list-group-item:last-child {
+    padding-bottom: 0 !important;
+  }
+  .list-group-item > a {
+    display: inline-block;
+  }
+  .list-group-item > a > img {
+    vertical-align: middle;
+  }
+</style>
+{% endblock %} {% block main %}
+<div class="py-3 mx-md-3 bg-light border-radius-2">
+  <h1 class="display-4 fw-normal border-bottom-dash text-center">Info/Github</h1>
+  <div class="py-3 px-md-3">
+    <ol class="list-group list-group-numbered list-group-flush">
+      <li class="list-group-item">
+        Automated processing streamline for mouse brain MRI
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            Structure MRI
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">K-space convertor (Sabrina Gjerswold-Selleck, Zihan Wan)</li>
+              <li class="list-group-item">Motion detection and correction (Zihan Wan)</li>
+              <li class="list-group-item">Within-subject Rigid Registration (Anish Puligilla)</li>
+              <li class="list-group-item">* SRR (Zihan, WanZhuoyao Xin)</li>
+              <li class="list-group-item">
+                SABER (DL-BET) (Sabrina Gjerswold-Selleck, Yanting Yang)
+                <a target="_blank" href="https://github.com/SAIL-GuoLab/DL-BET"><img alt="github" src="https://img.shields.io/badge/github-DL--BET-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+            </ol>
+          </li>
+          <li class="list-group-item">
+            CBV fMRI (Automated processing workflow for mouse brain CBV fMRI)
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">K-space convertor (Sabrina Gjerswold-Selleck, Zihan Wan)</li>
+              <li class="list-group-item">Motion detection and correction (Zihan Wan)</li>
+              <li class="list-group-item">Within-subject Rigid Registration (Anish Puligilla)</li>
+              <li class="list-group-item">* SRR (Zihan Wan, Zhuoyao Xin)</li>
+              <li class="list-group-item">
+                SABER (DL-BET) (Sabrina Gjerswold-Selleck, Yanting Yang)
+                <a target="_blank" href="https://github.com/SAIL-GuoLab/DL-BET"><img alt="github" src="https://img.shields.io/badge/github-DL--BET-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">DRC/ssCE (Yanting Yang)</li>
+              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+            </ol>
+          </li>
+          <li class="list-group-item">AI-Ktrans mapping from low-dose DCE MRI (Joanne Lee)</li>
+          <li class="list-group-item">AI-Ktrans mapping from IVIM-DTI MRI (Joanne Lee, Xuemin Zhu)</li>
+        </ol>
+      </li>
+      <li class="list-group-item">
+        Automated processing streamline for human brain MRI
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            Structure MRI
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">* QC</li>
+              <li class="list-group-item">* SRR (Zihan Wan, Zhuoyao Xin)</li>
+              <li class="list-group-item">
+                TABS - Bias field correction, BET and PVE (Vish Mitnala Rao)
+                <a target="_blank" href="https://github.com/raovish6/TABS"><img alt="github" src="https://img.shields.io/badge/github-TABS-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+            </ol>
+          </li>
+          <li class="list-group-item">
+            AI-CBV mapping from T1-weighted MRI
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">* QC</li>
+              <li class="list-group-item">* SRR (Zihan Wan, Zhuoyao Xin)</li>
+              <li class="list-group-item">
+                TABS - Bias field correction, BET and PVE (Vish Mitnala Rao)
+                <a target="_blank" href="https://github.com/raovish6/TABS"><img alt="github" src="https://img.shields.io/badge/github-TABS-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+              <li class="list-group-item">Deriving AI-CBV (Joanne Lee, Xuemin Zhu)</li>
+            </ol>
+          </li>
+          <li class="list-group-item">AI-Ktrans mapping from DTI MRI (Joanne Lee, Xuemin Zhu)</li>
+        </ol>
+      </li>
+      <li class="list-group-item">
+        Automated processing streamline for mouse brain MEGAPRESS MRS
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            JET v1.0 (David Ma)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/JET"><img alt="github" src="https://img.shields.io/badge/github-JET-brightgreen?logo=github" /></a>
+          </li>
+          <li class="list-group-item">
+            JET v2.0
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">
+                MRS registration (David Ma)
+                <a target="_blank" href="https://github.com/davidjma/CNN-FPC"><img alt="github" src="https://img.shields.io/badge/github-CNN--FPC-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">MRS fitting (Ye Tian, David Ma)</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="list-group-item">
+        Automated processing streamline for human brain MEGAPRESS MRS
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            JET v1.0 (David Ma)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/JET"><img alt="github" src="https://img.shields.io/badge/github-JET-brightgreen?logo=github" /></a>
+          </li>
+          <li class="list-group-item">
+            JET v2.0
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">
+                MRS registration (David Ma)
+                <a target="_blank" href="https://github.com/davidjma/CNN-FPC"><img alt="github" src="https://img.shields.io/badge/github-CNN--FPC-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">MRS fitting (Ye Tian, David Ma)</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="list-group-item">
+        Others
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">
+            Deep Learning of Gadolinium Contrast for Mapping Cerebral Blood Volume from Single-Modal Non-Contrast MRI (Chen Liu, Nanyan Zhu)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/DeepContrast_Demo"><img alt="github" src="https://img.shields.io/badge/github-DeepContrast__Demo-brightgreen?logo=github" /></a>
+          </li>
+          <li class="list-group-item">
+            Statistical Analyses and Visualization for Neuroimaging Large Dataset (Chen Liu, Nanyan Zhu)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/StatsVisualNeuroImaging"><img alt="github" src="https://img.shields.io/badge/github-StatsVisualNeuroImaging-brightgreen?logo=github" /></a>
+          </li>
+          <li class="list-group-item">
+            Dynamic Contrast Enhancement Perfusion Modeling in Mice (Nanyan Zhu)
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/DRC_modeling"><img alt="github" src="https://img.shields.io/badge/github-DRC__modeling-brightgreen?logo=github" class="align-middle" /></a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+</div>
+{% endblock %}

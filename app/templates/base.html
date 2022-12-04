@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}" />
+    <link rel="manifest" href="{{ url_for('static', filename='favicon_io/site.webmanifest') }}" />
+
+    <!--css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
+
+    <title>DeepStream-MRI</title>
+    {% endblock %}
+  </head>
+  <body class="bg-dark">
+    <script type="text/javascript" src="publication.js"></script>
+    <header class="sticky-top">
+      <!--nav bar-->
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="--bs-bg-opacity: 0.95">
+        <div class="container-fluid">
+          <a class="px-2" href="/"><img alt="logo" src="{{ url_for('static', filename='logo.png') }}" style="width: 40px; height: 40px" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/#info">Info/Github</a>
+              </li>
+              <li class="nav-item">
+                <!-- <a class="nav-link" href="/info">Info/Github</a> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/facility">Facility</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/publication">Publication</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="/poster">Poster</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>{% block main %}{% endblock %}</main>
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-6 col-md-3">
+          <h5 class="text-secondary">Pages</h5>
+          <ul class="list-unstyled">
+            <li><a class="link-secondary" href="/#info">Info/Github</a></li>
+            <!-- <li><a class="link-secondary" href="/info">Info/Github</a></li> -->
+            <li><a class="link-secondary" href="/team">Team</a></li>
+            <li><a class="link-secondary" href="/facility">Facility</a></li>
+            <li><a class="link-secondary" href="/publication">Publication</a></li>
+            <!-- <li><a class="link-secondary" href="/poster">Poster</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="col-12">
+        <span>Logo</span>
+        <small class="d-block mb-3 text-muted">© 2022</small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

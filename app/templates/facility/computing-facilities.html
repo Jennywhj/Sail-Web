@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block main %}
+<div class="py-3 mx-md-3 bg-light border-radius-2">
+  <h1 class="display-4 fw-normal border-bottom-dash text-center">Computing Facilities</h1>
+  <div class="row justify-content-center mx-0">
+    <div class="col-md-11">
+      <p class="lead fw-bold">Server/Hardware</p>
+      <p>1. Bruker Acquisition Workplace Computer:</p>
+      <div class="row justify-content-center mx-0 my-5">
+        <div class="col-md-6">
+          <img style="height: 100%; width: 100%" src="{{ url_for('static', filename='facility/Bruker Acquisition Workplace Computer.webp') }}" alt="Bruker Acquisition Workplace Computer" />
+        </div>
+      </div>
+      <ul>
+        <li><p>64 bit Linux multicore workstation, 16 GB RAM, 1TB hard disk</p></li>
+      </ul>
+      <p>2. Bruker Evaluation Workplace Computer:</p>
+      <div class="row justify-content-center mx-0 my-5">
+        <div class="col-md-6">
+          <img style="height: 100%; width: 100%" src="{{ url_for('static', filename='facility/Bruker Evaluation Workplace Computer.webp') }}" alt="Bruker Evaluation Workplace Computer" />
+        </div>
+      </div>
+      <ul>
+        <li><p>64 bit Linux multicore workstation, 16 GB RAM, 1TB hard disk</p></li>
+      </ul>
+      <p>3. Deep Learning Processing Server:</p>
+      <div class="row justify-content-center mx-0 my-5">
+        <div class="col-md-6">
+          <img style="height: 100%; width: 100%" src="{{ url_for('static', filename='facility/Deep Learning Processing Server.webp') }}" alt="Deep Learning Processing Server" />
+        </div>
+      </div>
+      <ul>
+        <li><p>CPU: Intel - Xeon E5-2650 V4 2.2GHz 12-Core Processor</p></li>
+        <li><p>CPU Cooler: Cooler Master - Hyper 212 EVO 82.9 CFM Sleeve Bearing CPU Cooler</p></li>
+        <li><p>Motherboard: ASRock - X99 WS-E EATX LGA2011-3 Motherboard</p></li>
+        <li><p>Memory1: Kingston - ValueRAM 64GB (4 x 16GB) Registered DDR4-2133 Memory</p></li>
+        <li><p>Memory2: Kingston - ValueRAM 64GB (4 x 16GB) Registered DDR4-2133 Memory</p></li>
+        <li><p>Storage SSD: Samsung - 850 EVO-Series 1TB 2.5" Solid State Drive</p></li>
+        <li><p>Storage HDD: Western Digital - Blue 2TB 3.5" 5400RPM Internal Hard Drive</p></li>
+        <li><p>Video Card1: NVIDIA - RTX 2080 Ti 12GB Video Card (2-Way SLI)</p></li>
+        <li><p>Video Card2: NVIDIA - RTX 2080 Ti 12GB Video Card (2-Way SLI)</p></li>
+        <li><p>Case: Corsair - Air 540 ATX Mid Tower Case</p></li>
+        <li><p>Power Supply: EVGA - SuperNOVA G2 1300W 80+ Gold Certified Fully-Modular ATX Power Supply</p></li>
+      </ul>
+      <p class="lead fw-bold">Software</p>
+      <p>Image Processing Tools:</p>
+      <ul>
+        <li><p>Matlab</p></li>
+        <li><p>PyCharm</p></li>
+        <li><p>PyTorch</p></li>
+        <li><p>FSL</p></li>
+        <li><p>FreeSurfer</p></li>
+        <li><p>3D Slicer</p></li>
+        <li><p>SPM</p></li>
+        <li><p>ANTs</p></li>
+        <li>
+          <p><strong>JET</strong>*</p>
+        </li>
+        <li>
+          <p><strong>MouseStream</strong>*</p>
+        </li>
+        <li>
+          <p><strong>COMIC</strong>*</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

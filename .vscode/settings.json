@@ -1,0 +1,10 @@
+{
+  "[Html]": {
+    //"editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.terminal.activateEnvInCurrentTerminal": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "python.envFile": "${workspaceFolder}/.venv",
+}

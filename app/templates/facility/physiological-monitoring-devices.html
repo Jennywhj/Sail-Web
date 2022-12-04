@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block main %}
+<div class="py-3 mx-md-3 bg-light border-radius-2">
+  <h1 class="display-4 fw-normal border-bottom-dash text-center">Physiological Monitoring Devices</h1>
+  <div class="row justify-content-center mx-0">
+    <div class="col-md-11">
+      <p class="lead fw-bold">Basic Life Monitoring Unit</p>
+      <p><span>MR compatible life monitoring of rodents providing</span></p>
+      <ul>
+        <li><p>Display and analysis of physiological (ECG and respiratory) signals</p></li>
+        <li><p>Body temperature supervision and measurement</p></li>
+        <li><p>ECG or respiratory synchronized MR signal detection</p></li>
+        <li><p>Gating IN/OUT Triggers</p></li>
+      </ul>
+      <p class="lead fw-bold">Trigger Channel</p>
+      <p><span>Real-time input and output channels for the user control of external devices or triggered data acquisition by external sources, e.g. respiration or ECG </span></p>
+      <ul>
+        <li><p>Four output lines</p></li>
+        <li><p>Two input lines</p></li>
+      </ul>
+      <p class="lead fw-bold">Body Temperature Conditioning System</p>
+      <p><span>Water based heating unit to condition the body temperature of (anesthetized) rodents via warming blankets or integrated water hoses in animal beds. The basic unit consists of:</span></p>
+      <ul>
+        <li><p>Water reservoir with pump and thermostat</p></li>
+        <li><p>Hoses to connect to the warming blankets or beds</p></li>
+      </ul>
+      <div class="row justify-content-center mx-0 my-5">
+        <div class="col-md-6">
+          <img style="height: 100%; width: 100%" src="{{ url_for('static', filename='facility/Physiological Monitoring Devices.webp') }}" alt="Physiological Monitoring Devices" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
