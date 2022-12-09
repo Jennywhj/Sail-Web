@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block head %} {{ super() }}
-<!-- <style type="text/css">
-  .list-group-flush > .list-group-item:last-child {
+<style type="text/css">
+  /* .list-group-flush > .list-group-item:last-child {
     border-bottom-width: 1px !important;
   }
   .hiden-link {
@@ -19,7 +19,13 @@
   .list-group-item > a > img {
     vertical-align: middle;
   }
-</style> -->
+  li { font-weight: bold; }
+  li > * { font-weight: normal; } */
+  .ulfont{
+    font-size: 18px;
+  }
+
+</style>
 {% endblock %} {% block main %}
 
 <div class="my-5 text-center text-light">
@@ -37,127 +43,147 @@
   <h1 class="display-4 fw-normal border-bottom-dash text-center">Info/Github</h1>
 
   <div class="py-3 px-md-3">
-    <ol class="list-group list-group-numbered list-group-flush">
-      <li class="list-group-item">
-        Automated processing streamline for mouse brain MRI
+    <ol class="list-group list-group-flush">
+      <li class="list-group-item"> <b class="ulfont">I. Automated processing streamline for mouse brain MRI</b>
         <ol class="list-group list-group-numbered list-group-flush">
-          <li class="list-group-item">
-            Structure MRI
+          <li class="list-group-item">Structure MRI (Automated processing workflow for mouse brain structural MRI)
             <ol class="list-group list-group-numbered list-group-flush">
-              <li class="list-group-item">K-space convertor (Sabrina Gjerswold-Selleck, Zihan Wan)</li>
-              <li class="list-group-item">Motion detection and correction (Zihan Wan)</li>
-              <li class="list-group-item">Within-subject Rigid Registration (Anish Puligilla)</li>
-              <li class="list-group-item">* SRR (Zihan, WanZhuoyao Xin)</li>
-              <li class="list-group-item">
-                SABER (DL-BET) (Sabrina Gjerswold-Selleck, Yanting Yang)
+              <li class="list-group-item">Brukertools</li>
+              <li class="list-group-item">AFT-Net and CU-Net
+                <a target="_blank" href="https://github.com/Yanting-Yang/AFT"><img alt="github" src="https://img.shields.io/badge/github-AFT-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">Accelerated MRI and Super-resolution recontruction
+                <a target="_blank" href="https://github.com/Yanting-Yang/AFT"><img alt="github" src="https://img.shields.io/badge/github-Acc-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">DL-BET: Deep Learning based Brain Extraction Tool 
                 <a target="_blank" href="https://github.com/SAIL-GuoLab/DL-BET"><img alt="github" src="https://img.shields.io/badge/github-DL--BET-brightgreen?logo=github" /></a>
               </li>
-              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+              <li class="list-group-item">Cycle Inverse Consistent TransMorph: Cycle Inverse Consistent Deformable Medical Image Registration with Transfomer 
+                <a target="_blank" href="https://github.com/ChenghaoZhang97/CycleTransMorph"><img alt="github" src="https://img.shields.io/badge/github-CycleTransMorph-brightgreen?logo=github" /></a>
+              </li>
             </ol>
           </li>
-          <li class="list-group-item">
-            CBV fMRI (Automated processing workflow for mouse brain CBV fMRI)
+          <li class="list-group-item">CBV fMRI (Automated processing workflow for mouse brain CBV functional MRI)
             <ol class="list-group list-group-numbered list-group-flush">
-              <li class="list-group-item">K-space convertor (Sabrina Gjerswold-Selleck, Zihan Wan)</li>
-              <li class="list-group-item">Motion detection and correction (Zihan Wan)</li>
-              <li class="list-group-item">Within-subject Rigid Registration (Anish Puligilla)</li>
-              <li class="list-group-item">* SRR (Zihan Wan, Zhuoyao Xin)</li>
-              <li class="list-group-item">
-                SABER (DL-BET) (Sabrina Gjerswold-Selleck, Yanting Yang)
+              <li class="list-group-item">Brukertools</li>
+              <li class="list-group-item">AFT-Net and CU-Net
+                <a target="_blank" href="https://github.com/Yanting-Yang/AFT"><img alt="github" src="https://img.shields.io/badge/github-AFT-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">Accelerated MRI and Super-resolution recontruction
+                <a target="_blank" href="https://github.com/Yanting-Yang/AFT"><img alt="github" src="https://img.shields.io/badge/github-Acc-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">DL-BET: Deep Learning based Brain Extraction Tool 
                 <a target="_blank" href="https://github.com/SAIL-GuoLab/DL-BET"><img alt="github" src="https://img.shields.io/badge/github-DL--BET-brightgreen?logo=github" /></a>
               </li>
-              <li class="list-group-item">DRC/ssCE (Yanting Yang)</li>
-              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
+              <li class="list-group-item">DRC: Dynamic Relaxation Contrast MRI processing tools for mouse brain imaging
+                <a target="_blank" href="https://github.com/SAIL-GuoLab/DRC_modeling"><img alt="github" src="https://img.shields.io/badge/github-DRC-brightgreen?logo=github" /></a>
+              </li>
             </ol>
           </li>
-          <li class="list-group-item">AI-Ktrans mapping from low-dose DCE MRI (Joanne Lee)</li>
-          <li class="list-group-item">AI-Ktrans mapping from IVIM-DTI MRI (Joanne Lee, Xuemin Zhu)</li>
+          <li class="list-group-item">AI-CBV mapping from T2-weighted MRI
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">DeepContrast: Deep Learning of MRI Contrast Enhancement for Mapping Cerebral Blood Volume from Single-Modal Non-Contrast Scan
+                <a target="_blank" href="https://github.com/SAIL-GuoLab/DeepContrast_Demo"><img alt="github" src="https://img.shields.io/badge/github-DeepContrast-brightgreen?logo=github" /></a>
+              </li>
+            </ol>
+          </li>
+          <li class="list-group-item">AI-Ktrans mapping from low-dose DCE MRI
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">ST-Net: Deep Learning Enables Reduced Gadolinium Dose for Contrast-Enhanced Blood-Brain Barrier Opening Quantitative 
+                <!-- <a target="_blank" href="https://github.com/SAIL-GuoLab/DeepContrast_Demo"><img alt="github" src="https://img.shields.io/badge/github-DeepContrast-brightgreen?logo=github" /></a> -->
+              </li>
+            </ol>
+          </li>
         </ol>
       </li>
-      <li class="list-group-item">
-        Automated processing streamline for human brain MRI
+      <li class="list-group-item"><b class="ulfont">II. Automated mouse brain MRS processing streamline</b>
         <ol class="list-group list-group-numbered list-group-flush">
-          <li class="list-group-item">
-            Structure MRI
-            <ol class="list-group list-group-numbered list-group-flush">
-              <li class="list-group-item">* QC</li>
-              <li class="list-group-item">* SRR (Zihan Wan, Zhuoyao Xin)</li>
-              <li class="list-group-item">
-                TABS - Bias field correction, BET and PVE (Vish Mitnala Rao)
-                <a target="_blank" href="https://github.com/raovish6/TABS"><img alt="github" src="https://img.shields.io/badge/github-TABS-brightgreen?logo=github" /></a>
-              </li>
-              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
-            </ol>
-          </li>
-          <li class="list-group-item">
-            AI-CBV mapping from T1-weighted MRI
-            <ol class="list-group list-group-numbered list-group-flush">
-              <li class="list-group-item">* QC</li>
-              <li class="list-group-item">* SRR (Zihan Wan, Zhuoyao Xin)</li>
-              <li class="list-group-item">
-                TABS - Bias field correction, BET and PVE (Vish Mitnala Rao)
-                <a target="_blank" href="https://github.com/raovish6/TABS"><img alt="github" src="https://img.shields.io/badge/github-TABS-brightgreen?logo=github" /></a>
-              </li>
-              <li class="list-group-item">Between-subject Diffeomorphic Registration (Anish Puligilla)</li>
-              <li class="list-group-item">Deriving AI-CBV (Joanne Lee, Xuemin Zhu)</li>
-            </ol>
-          </li>
-          <li class="list-group-item">AI-Ktrans mapping from DTI MRI (Joanne Lee, Xuemin Zhu)</li>
-        </ol>
-      </li>
-      <li class="list-group-item">
-        Automated processing streamline for mouse brain MEGAPRESS MRS
-        <ol class="list-group list-group-numbered list-group-flush">
-          <li class="list-group-item">
-            JET v1.0 (David Ma)
+          <li class="list-group-item">JET: J-Editing Toolkit
             <a target="_blank" href="https://github.com/SAIL-GuoLab/JET"><img alt="github" src="https://img.shields.io/badge/github-JET-brightgreen?logo=github" /></a>
           </li>
-          <li class="list-group-item">
-            JET v2.0
+          <li class="list-group-item">DeepMRS-Net
             <ol class="list-group list-group-numbered list-group-flush">
-              <li class="list-group-item">
-                MRS registration (David Ma)
+              <li class="list-group-item">CNN-FPC: Magnetic Resonance Spectroscopy Frequency and Phase Correction Using Convolutional Neural Networks
                 <a target="_blank" href="https://github.com/davidjma/CNN-FPC"><img alt="github" src="https://img.shields.io/badge/github-CNN--FPC-brightgreen?logo=github" /></a>
               </li>
-              <li class="list-group-item">MRS fitting (Ye Tian, David Ma)</li>
+              <li class="list-group-item">CNN-SR: Magnetic Resonance Spectroscopy Spectral Registration Using Deep Learning
+                <a target="_blank" href="https://github.com/davidjma/CNN-SR"><img alt="github" src="https://img.shields.io/badge/github-CNN--SR-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">DL-LCModel
+                <!-- <a target="_blank" href="https://github.com/SAIL-GuoLab/DeepContrast_Demo"><img alt="github" src="https://img.shields.io/badge/github-DeepContrast-brightgreen?logo=github" /></a> -->
+              </li>
             </ol>
           </li>
         </ol>
       </li>
-      <li class="list-group-item">
-        Automated processing streamline for human brain MEGAPRESS MRS
+      <li class="list-group-item"><b class="ulfont">III. Automated human brain MRI processing streamline</b>
         <ol class="list-group list-group-numbered list-group-flush">
-          <li class="list-group-item">
-            JET v1.0 (David Ma)
+          <li class="list-group-item">Structure MRI segmentation and registration
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">TABS: Transformer-based Automated Brain Tissue Segmentation
+                <a target="_blank" href="https://github.com/raovish6/TABS"><img alt="github" src="https://img.shields.io/badge/github-TABS-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">Cycle Inverse Consistent TransMorph
+                <!-- <a target="_blank" href="https://github.com/davidjma/CNN-SR"><img alt="github" src="https://img.shields.io/badge/github-CNN--SR-brightgreen?logo=github" /></a> -->
+              </li>
+            </ol>
+          </li>
+          <li class="list-group-item">AI-CBV mapping from T1-weighted MRI
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">DeepContrast: Deep Learning of MRI Contrast Enhancement for Mapping Cerebral Blood Volume from Single-Modal Non-Contrast Scan
+                <a target="_blank" href="https://github.com/SAIL-GuoLab/DeepContrast_Demo"><img alt="github" src="https://img.shields.io/badge/github-DeepContrast-brightgreen?logo=github" /></a>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="list-group-item"><b class="ulfont">IV. Automated human brain MRS processing streamline</b>
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">JET: J-Editing Toolkit
             <a target="_blank" href="https://github.com/SAIL-GuoLab/JET"><img alt="github" src="https://img.shields.io/badge/github-JET-brightgreen?logo=github" /></a>
           </li>
-          <li class="list-group-item">
-            JET v2.0
+          <li class="list-group-item">DeepMRS-Net
             <ol class="list-group list-group-numbered list-group-flush">
-              <li class="list-group-item">
-                MRS registration (David Ma)
+              <li class="list-group-item">CNN-FPC: Magnetic Resonance Spectroscopy Frequency and Phase Correction Using Convolutional Neural Networks
                 <a target="_blank" href="https://github.com/davidjma/CNN-FPC"><img alt="github" src="https://img.shields.io/badge/github-CNN--FPC-brightgreen?logo=github" /></a>
               </li>
-              <li class="list-group-item">MRS fitting (Ye Tian, David Ma)</li>
+              <li class="list-group-item">CNN-SR: Magnetic Resonance Spectroscopy Spectral Registration Using Deep Learning
+                <a target="_blank" href="https://github.com/davidjma/CNN-SR"><img alt="github" src="https://img.shields.io/badge/github-CNN--SR-brightgreen?logo=github" /></a>
+              </li>
+              <li class="list-group-item">DL-LCModel
+                <!-- <a target="_blank" href="https://github.com/davidjma/CNN-FPC"><img alt="github" src="https://img.shields.io/badge/github-CNN--FPC-brightgreen?logo=github" /></a> -->
+              </li>
             </ol>
           </li>
         </ol>
       </li>
-      <li class="list-group-item">
-        Others
+      <li class="list-group-item"><b class="ulfont">V. Cuttlebase is a scientifictoolkit for the dwarf cuttlefish, Sepia bandensis</b>
+        <ol class="list-group list-group-flush">
+          <li class="list-group-item">To create an MRI-based 3D brain atlas for the dwarf cuttlefish, ex vivo magnetic resonance imaging of 8 adult dwarf cuttlefish brains (4 males, 4 females) at 50 µm isotropic resolution was performed. Deep learning techniques were used to improve manually-annoted brain masks that were then used to extract the brain regions for subsequent diffeomorphic registration using the ANTs toolbox.
+            <a target="_blank" href="https://github.com/SAIL-GuoLab/Cuttlebase"><img alt="github" src="https://img.shields.io/badge/github-Cuttlebase-brightgreen?logo=github" class="align-middle" /></a>
+            <a target="_blank" href="https://www.cuttlebase.org"><img alt="github" src="https://img.shields.io/badge/web-Cuttlebase-brightgreen" class="align-middle" /></a> 
+          </li>
+        </ol>
+      </li>
+      <li class="list-group-item"><b class="ulfont">VI. Statistical analyses and visualization for large neuroimaging dataset</b>
+        <a target="_blank" href="https://github.com/SAIL-GuoLab/StatsVisualNeuroImaging"><img alt="github" src="https://img.shields.io/badge/github-StatsVisualNeuroImaging-brightgreen?logo=github" class="align-middle" /></a>
+      </li>
+      <li class="list-group-item"><b class="ulfont">VII. Predicting brainAGE with MRI using deep learning</b>
         <ol class="list-group list-group-numbered list-group-flush">
-          <li class="list-group-item">
-            Deep Learning of Gadolinium Contrast for Mapping Cerebral Blood Volume from Single-Modal Non-Contrast MRI (Chen Liu, Nanyan Zhu)
-            <a target="_blank" href="https://github.com/SAIL-GuoLab/DeepContrast_Demo"><img alt="github" src="https://img.shields.io/badge/github-DeepContrast__Demo-brightgreen?logo=github" /></a>
-          </li>
-          <li class="list-group-item">
-            Statistical Analyses and Visualization for Neuroimaging Large Dataset (Chen Liu, Nanyan Zhu)
-            <a target="_blank" href="https://github.com/SAIL-GuoLab/StatsVisualNeuroImaging"><img alt="github" src="https://img.shields.io/badge/github-StatsVisualNeuroImaging-brightgreen?logo=github" /></a>
-          </li>
-          <li class="list-group-item">
-            Dynamic Contrast Enhancement Perfusion Modeling in Mice (Nanyan Zhu)
-            <a target="_blank" href="https://github.com/SAIL-GuoLab/DRC_modeling"><img alt="github" src="https://img.shields.io/badge/github-DRC__modeling-brightgreen?logo=github" class="align-middle" /></a>
-          </li>
+          <li class="list-group-item">Regression model input: T1-weighted sMRI (to be announced)</li>
+          <li class="list-group-item">Regression model input: T1-weighted sMRI + AI-CBV fMRI (to be announced)</li>
+        </ol>
+      </li>
+      <li class="list-group-item"><b class="ulfont">VIII. Diagnosing Alzheimer’s disease with MRI using deep learning</b>
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">Classification model input: T1-weighted sMRI (to be announced)</li>
+          <li class="list-group-item">Classification model input: T1-weighted sMRI + AI-CBV fMRI (to be announced)</li>
+        </ol>
+      </li>
+      <li class="list-group-item"><b class="ulfont">IX. Diagnosing schizophrenia with MRI using deep learning</b>
+        <ol class="list-group list-group-numbered list-group-flush">
+          <li class="list-group-item">Classification model input: T1-weighted sMRI (to be announced)</li>
+          <li class="list-group-item">Classification model input: T1-weighted sMRI + AI-CBV fMRI (to be announced)</li>
         </ol>
       </li>
     </ol>
